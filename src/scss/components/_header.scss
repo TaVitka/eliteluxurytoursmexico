@@ -1,0 +1,21 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins/"as*;
+
+.header {
+  position: fixed;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  padding: clamp(10px, 1.3vw, 16px) clamp(12px, 4.6vw, 64px);
+  max-width: var(--content-width);
+  width: 100%;
+  background-color: var(--color-green-400);
+  border-radius: var(--radius-main);
+  transition-property: transform, padding;
+  transition-duration: 0.15s;
+
+  &.hide {
+    transform: translateY(-100%) translateX(-50%);
+  }
+}

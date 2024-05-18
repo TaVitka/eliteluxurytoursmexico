@@ -1,0 +1,39 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins"as*;
+
+*[class].btn {
+  display: block;
+  width: fit-content;
+  margin: 0;
+  padding: 7px clamp(15px, 2.3vw, 31px);
+  border: 1px solid var(--color-white);
+  font-family: var(--font-family-primary);
+  font-weight: var(--fw-500);
+  font-size: 18px;
+  line-height: 1.5;
+  letter-spacing: 0;
+  color: var(--color-dark);
+  text-align: center;
+  text-transform: capitalize;
+  white-space: nowrap;
+  border-radius: var(--radius-main);
+  background: var(--color-white);
+  transition-property: background, color, border-color;
+  transition-duration: 0.4s;
+  transition-timing-function: ease-in-out;
+
+  &:hover,
+  &--reverse {
+    color: var(--color-white);
+    background: var(--color-red-400);
+    border-color: var(--color-red-400);
+  }
+
+  &--reverse {
+    &:hover {
+      color: var(--color-dark);
+      background: var(--color-white);
+      border-color: var(--color-white);
+    }
+  }
+}
