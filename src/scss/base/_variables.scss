@@ -1,0 +1,59 @@
+/* stylelint-disable alpha-value-notation */
+/* stylelint-disable color-function-notation */
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+  --content-width: 1312px;
+  --container-offset: 16px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+  // font-family
+  --font-family-primary: "Poppins", sans-serif;
+  --font-family-secondary: "Merriweather", serif;
+
+  // font-weight
+  --fw-400: 400;
+  --fw-500: 500;
+  --fw-600: 600;
+  --fw-700: 700;
+  --fw-900: 900;
+
+  // color
+  --color-white: #ffffff;
+  --color-white-30: #ffffff4d;
+  --color-white-60: rgba(255, 255, 255, 0.6);
+  --color-white-80:#ffffffcc;
+  --color-white-90: #ffffffe5;
+
+  --color-black: #000000;
+  --color-dark: #252b42;
+  --color-dark-60: #00070599;
+
+  --color-green-400: #004830;
+  --color-green-500: #072711;
+
+  --color-grey-100: #f9f9f9;
+  --color-grey-300: #e6e6e6;
+  --color-grey-400: #414141;
+  --color-grey-416: #41414129;
+
+  --color-red-400: #f14a46;
+
+  //  radius
+  --radius-main: 99px;
+  --radius-l: 40px;
+  --radius-m: 16px;
+  --radius-s: 12px;
+  --radius-xs: 4px;
+  --radius-full: 50%;
+
+  // shadow
+  --shadow-primary: 0px 2px 25px 0px #0048301a;
+  --shadow-secondary: 0px 2px 4px 0px #0000001a;
+  --shadow-contact: 0px 13px 19px 0px #00000012;
+
+  // gradient
+  --gradient-primary: linear-gradient(0deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.08)), linear-gradient(180deg, rgba(206, 207, 208, 0) 77.06%, rgba(255, 255, 255, 0.8) 100%);
+  --gradient-slider: linear-gradient(180deg, rgba(253, 250, 245, 0) 79.25%, rgba(255, 255, 255, 0.8) 100%);
+  --gradient-contact: linear-gradient(0deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+}

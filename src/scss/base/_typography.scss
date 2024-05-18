@@ -1,0 +1,88 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins/"as*;
+
+h1,
+h2,
+h3 {
+  overflow: hidden;
+}
+
+h1,
+h2 {
+  font-family: var(--font-family-secondary);
+  font-weight: var(--fw-700);
+}
+
+h1 {
+  font-size: clamp(32px, 4vi, 64px);
+  line-height: 1.25;
+  color: var(--color-white);
+}
+
+h2 {
+  font-size: clamp(26px, 2.8vi, 40px);
+  line-height: 1.42;
+  color: var(--color-green-500);
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: var(--fw-600);
+  line-height: 1.5;
+  letter-spacing: 0;
+  color: var(--color-red-400);
+}
+
+.subtitle {
+  font-size: clamp(20px, 2vi, 24px);
+  font-weight: var(--fw-500);
+  line-height: 1.38;
+  letter-spacing: 0;
+  color: var(--color-white-80);
+}
+
+.desc {
+  font-size: 18px;
+  font-weight: var(--fw-500);
+  line-height: 1.11;
+  color: var(--color-grey-400);
+}
+
+.accent {
+  font-weight: var(--fw-600);
+  color: var(--color-red-400);
+}
+
+a,
+button {
+  display: block;
+  width: fit-content;
+  overflow: hidden;
+}
+
+//input,
+//textarea {
+//  font-size: 16px;
+//  line-height: 1;
+//
+//  &::placeholder {
+//
+//  }
+//}
+
+.footer__text {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0;
+  color: var(--color-white);
+
+  br {
+    display: none;
+  }
+
+  @include media(mobile-m) {
+    br {
+      display: block;
+    }
+  }
+}
