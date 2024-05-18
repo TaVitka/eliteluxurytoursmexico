@@ -36,4 +36,8 @@
       border-color: var(--color-white);
     }
   }
+
+  &--large {
+    padding: 11px clamp(24px, 4.5vw, 63px);
+  }
 }
