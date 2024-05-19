@@ -16,6 +16,6 @@
   transition-duration: 0.15s;
 
   &.hide {
-    transform: translateY(-100%) translateX(-50%);
+    transform: translateY(calc(-100% - 24px)) translateX(-50%);
   }
 }
