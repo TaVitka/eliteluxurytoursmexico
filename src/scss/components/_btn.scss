@@ -47,4 +47,33 @@
       width: 100%;
     }
   }
+
+  &--send {
+    padding: 4px 24px 4px 44px;
+    border-radius: var(--radius-xs);
+
+    &::before {
+      @include cover-background;
+
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 16px;
+      transform: translateY(-50%);
+      width: 21px;
+      height: 21px;
+      background-image: url("../images/icons/send-icon.svg");
+    }
+
+    @include media(mobile-m) {
+      border-radius: var(--radius-s);
+      padding-block:  clamp(10px, 2vw, 21.5px);
+      padding-inline: 16px;
+      font-size: 14px;
+
+      &::before {
+        left: 12px;
+      }
+    }
+  }
 }

@@ -79,28 +79,74 @@ body {
 }
 
 .form {
+  position: relative;
   max-width: 650px;
   width: 100%;
   margin-inline: auto;
+  margin-bottom: 12px;
 
-  //& > *:not(:nth-last-child(2), :last-child) {
-  //  margin-bottom: 16px;
-  //}
-  //
-  //& > *:nth-last-child(2) {
-  //  margin-bottom: 24px;
-  //}
+  *[class].btn {
+    position: absolute;
+    top: 50%;
+    right: 24px;
+    transform: translateY(-50%);
+  }
+
+  @include media(mobile-m) {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    *[class].btn {
+      position: initial;
+      transform: translateY(0);
+      width: 100%;
+    }
+  }
 }
 
 label {
+  position: relative;
   display: block;
+
+  &::before {
+    @include cover-background;
+
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 25px;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    background-image: url("../images/icons/mail-icon.svg");
+  }
+
+  @include media(mobile-l) {
+   &::before {
+     left: 12px;
+   }
+  }
 }
 
 input {
   display: block;
   width: 100%;
-  padding: clamp(5px, 2vw, 22px) clamp(10px, 2vw, 24px) 190px;
-  background-color: var(--color-whute-90);
+  padding-inline: 58px 190px;
+  padding-block:  clamp(10px, 2vw, 21.5px);
+  background-color: var(--color-white-90);
   border-radius: var(--radius-s);
   box-shadow: var(--shadow-contact);
+  font-size: 16px;
+  line-height: 1;
+  color: var(--color-green-500);
+
+  &::placeholder {
+    font-size: 14px;
+    color: var(--color-grey-400);
+  }
+
+  @include media(mobile-l) {
+    padding-inline: 40px 16px;
+  }
 }

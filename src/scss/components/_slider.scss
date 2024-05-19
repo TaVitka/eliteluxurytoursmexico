@@ -2,11 +2,14 @@
 @use "../utils/mixins/"as*;
 
 .slider {
+  overflow: hidden;
+
   &__inner {
     position: relative;
   }
 
   &__slides {
+    overflow: visible;
     max-width: 95vw;
   }
 
@@ -24,6 +27,10 @@
     padding: clamp(12px, 1.7vw, 24px);
     overflow: hidden;
     border-radius: var(--radius-l);
+
+    &:not(.swiper-slide-active) {
+      opacity: 0;
+    }
   }
 
   &__image {
@@ -78,7 +85,8 @@
     @include cover-background;
 
     position: absolute;
-    top: 54.6%;
+    top: 50%;
+    transform: translateY(-50%);
     z-index: 4;
     width: 36px;
     height: 36px;
@@ -89,7 +97,7 @@
 
     &--next {
       right: -18px;
-      transform: rotate(180deg);
+      transform: translateY(-50%) rotate(180deg);
     }
 
     &--prev {
@@ -120,18 +128,16 @@
     }
 
     &__button {
-      top: 50%;
-      transform: translateY(-50%);
       width: 24px;
       height: 24px;
-
-      &--next {
-        transform: translateY(-50%) rotate(180deg);
-      }
     }
   }
 
   @include media(mobile-m) {
+    &__items {
+      margin-bottom: 24px;
+    }
+
     &__item {
       align-items: center;
     }

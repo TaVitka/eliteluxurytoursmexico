@@ -35,9 +35,45 @@
     }
   }
 
+  &--request {
+    .hero__inner {
+      min-height: 600px;
+      padding: 0;
+    }
+
+    .hero__content {
+      gap: 0;
+      padding-bottom: 40px;
+
+      h1 {
+        margin-bottom: 30px;
+        font-family: var(--font-family-primary);
+        font-size: clamp(20px, 2vi, 28px);
+        line-height: 1;
+        font-weight: var(--fw-500);
+      }
+
+      p {
+        font-weight: var(--fw-500);
+        color: var(--color-white);
+      }
+    }
+  }
+
   @include media(tablet) {
-    &__inner {
+    &__inner,
+    &--request .hero__inner {
       min-height: 480px;
+    }
+
+    &--request {
+      .hero__inner {
+        padding: 32px 0;
+      }
+
+      .hero__content {
+        padding-bottom: 0;
+      }
     }
   }
 
