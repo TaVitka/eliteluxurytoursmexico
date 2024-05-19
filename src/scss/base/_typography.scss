@@ -53,6 +53,19 @@ h3 {
   color: var(--color-red-400);
 }
 
+.decor {
+  position: relative;
+  padding-top: 26px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    width: 100%;
+    border-top: 2px solid var(--color-grey-300);
+  }
+}
+
 a,
 button {
   display: block;

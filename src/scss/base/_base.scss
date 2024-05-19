@@ -43,21 +43,6 @@ body {
   min-height: var(--vh);
 }
 
-.section {
-  padding: clamp(30px, 4.5vw, 65px) 0;
-
-  & > *:not(:last-child) {
-    margin-bottom: clamp(24px, 34vw, 45px);
-  }
-
-  &__top {
-    @include flex-v-center;
-    flex-direction: column;
-    gap: 12px;
-    text-align: center;
-  }
-}
-
 .article {
   position: relative;
 
