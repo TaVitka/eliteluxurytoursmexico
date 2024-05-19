@@ -34,6 +34,16 @@
     background-color: var(--color-grey-100);
   }
 
+  &--explore {
+    .section__top {
+      align-items: flex-start;
+      max-width: 978px;
+      width: 100%;
+      margin-inline: auto 0;
+      text-align: left;
+    }
+  }
+
   @include media(mobile-l) {
     &__image {
       aspect-ratio: 3/2;

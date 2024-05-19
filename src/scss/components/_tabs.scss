@@ -10,10 +10,80 @@
     }
   }
 
+  &__btn {
+    cursor: pointer;
+  }
+
+  &__wrapper {
+    display: flex;
+    gap: 24px;
+    max-width: 1201px;
+    width: 100%;
+  }
+
+  &--vertical {
+    .tabs__nav {
+      max-width: 311px;
+      width: 100%;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 10px;
+
+      li:not(:last-of-type) {
+        margin-right: 0;
+      }
+    }
+
+    .tabs__btn {
+      font-size: 18px;
+      line-height: 1.11;
+      color: var(--color-grey-400);
+      font-weight: var(--fw-500);
+      border-bottom: 2px solid transparent;
+      transition-property: color, border-color;
+      transition-duration: 0.4s;
+      transition-timing-function: ease-in-out;
+
+      &.selected {
+        font-size: 20px;
+        font-weight: var(--fw-700);
+        color: var(--color-red-400);
+      }
+
+      &:not(.selected):hover {
+        color: var(--color-red-400);
+        border-color: var(--color-red-400);
+      }
+    }
+
+    .tabs__pane {
+      max-width: 866px;
+      width: 100%;
+    }
+  }
+
   @include media(tablet) {
     &__nav {
       flex-wrap: wrap;
       gap: 24px;
+    }
+
+    &__wrapper {
+      flex-direction: column;
+    }
+
+    &--vertical {
+      .tabs__nav {
+        flex-direction: row;
+        max-width: 100%;
+        justify-content: center;
+        gap: 24px;
+      }
+
+      .tabs__pane {
+        max-width: 100%;
+      }
     }
   }
 
