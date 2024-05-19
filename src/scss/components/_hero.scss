@@ -73,6 +73,12 @@
     }
   }
 
+  &--guide {
+    .hero__content {
+      width: 90%;
+    }
+  }
+
   @include media(tablet) {
     &__inner,
     &--request .hero__inner {
