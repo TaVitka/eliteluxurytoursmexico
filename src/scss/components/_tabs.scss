@@ -1,0 +1,25 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins/"as*;
+
+.tabs {
+  &__nav {
+    @include flex-all-center;
+
+    li:not(:last-of-type) {
+      margin-right: 16px;
+    }
+  }
+
+  @include media(tablet) {
+    &__nav {
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+  }
+
+  @include media(mobile-s) {
+    &__nav {
+      flex-direction: column;
+    }
+  }
+}

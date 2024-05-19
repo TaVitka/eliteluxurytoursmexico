@@ -23,7 +23,8 @@
   transition-timing-function: ease-in-out;
 
   &:hover,
-  &--reverse {
+  &--reverse,
+  &.selected.tabs__btn {
     color: var(--color-white);
     background: var(--color-red-400);
     border-color: var(--color-red-400);
@@ -75,5 +76,13 @@
         left: 12px;
       }
     }
+  }
+
+  &.tabs__btn {
+    padding: 8px clamp(12px, 1.7vw, 24px);
+    font-weight: var(--fw-600);
+    line-height: 1.25;
+    color: var(--color-grey-400);
+    cursor: pointer;
   }
 }

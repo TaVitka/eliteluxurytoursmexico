@@ -20,18 +20,23 @@
 
   &__content {
     @include flex-v-center;
+
     flex-direction: column;
     gap: 24px;
-
     position: relative;
     z-index: 2;
-    max-width: 1024px;
-    width: 100%;
     margin-inline: auto;
     text-align: center;
+  }
 
-    .subtitle {
-      width: 55%;
+  &--home {
+    .hero__content {
+      max-width: 1024px;
+      width: 100%;
+
+      .subtitle {
+        width: 55%;
+      }
     }
   }
 
@@ -56,6 +61,14 @@
       p {
         font-weight: var(--fw-500);
         color: var(--color-white);
+      }
+    }
+  }
+
+  &--tours {
+    .hero__content {
+      .subtitle {
+        width: 45%;
       }
     }
   }
